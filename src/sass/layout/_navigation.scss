@@ -1,0 +1,185 @@
+.navigation {
+  height: 6rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: $color-primary;
+  transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem 1.5rem;
+  @media (max-width: 768px) {
+    padding: 0.5rem 0.5rem;
+  }
+  & > :not(:last-child) {
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: $color-primary;
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    @media (max-width: 768px) {
+      width: 30%;
+    }
+    &__imgBox {
+      position: relative;
+      display: flex;
+      width: 100%;
+      padding: 1rem 5rem;
+      @media (max-width: 768px) {
+        padding: 0rem 0rem;
+      }
+      &__img {
+        text-decoration: none;
+        color: $color-white;
+        width: 100%;
+  
+        &:hover {
+          cursor: pointer;
+        }
+  
+      }
+    }
+  }
+
+  &__search {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 768px) {
+      width: 40%;
+    }
+  }
+
+  &__leftButtons {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__box {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: $color-white;
+      & > :not(:last-child) {
+        margin-right: 3.8rem;
+        
+      }
+      @media (max-width: 768px) {
+        & > :not(:last-child) {
+          margin-right: 1.5rem;
+          
+        }
+    
+      }
+
+      &__ind {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      &__indRespHidden {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        @media (max-width: 768px) {
+          display: none;
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+ /* @media (max-width: 768px) {
+    height: auto; // Ajusta la altura según el contenido
+    padding: 0.1rem; // Cambia el relleno
+    &__search,
+    &__leftButtons {
+      width: 20%; // Ocupa el 100% del ancho
+    }
+    &__icon {
+      width: 10%;
+      &__imgBox {
+        position: relative;
+        display: flex;
+        width: 100%;
+        padding: 1rem 5rem;
+        &__img {
+          text-decoration: none;
+          color: $color-white;
+          width: 100%;
+          &:hover {
+            cursor: pointer;
+          }
+    
+        }
+      }
+    }
+  }*/
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    height: auto;
+    padding: 0.4rem 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .navigation__icon {
+    width: 35%;
+  }
+
+  .navigation__leftButtons {
+    width: 65%;
+    justify-content: flex-end;
+  }
+
+  .navigation__search {
+    order: 3;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .navigation__leftButtons__box {
+    & > :not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &__ind p,
+    &__indRespHidden p {
+      display: none; // solo iconos en móvil
+    }
+  }
+
+  .icon--bg {
+    font-size: 2rem;
+  }
+}
+
+
+
+
+.navigation-prov {
+  background-color: $color-secondary;
+}
+
+.navigation-adm {
+  background-color: $color-tertiary;
+}

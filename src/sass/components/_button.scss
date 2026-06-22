@@ -1,0 +1,135 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.2rem 2.4rem;
+        min-width: 14rem;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        
+        font-family: 'Inter', sans-serif;
+        font-size: $default-font-size;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        line-height: 1;
+
+        transition: all 0.2s ease-in-out;
+        position: relative;
+        backface-visibility: hidden;
+    }
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($color-black, 0.15);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(0);
+        box-shadow: 0 2px 6px rgba($color-black, 0.1);
+    }
+
+    &:disabled,
+    &.disabled {
+        background-color: $color-grey-light-2 !important;
+        color: $color-grey-dark !important;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+
+    &--purple {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:hover { background-color: $color-primary-light; }
+        &:active { background-color: $color-primary-dark; }
+    }
+
+    &--blue {
+        background-color: $color-blue;
+        color: $color-white;
+
+        &:hover { background-color: lighten($color-blue, 5%); }
+        &:active { background-color: darken($color-blue, 10%); }
+    }
+
+    &--green {
+        background-color: $color-green;
+        color: $color-white;
+
+        &:hover { background-color: lighten($color-green, 5%); }
+        &:active { background-color: $color-green-dark; }
+    }
+
+    &--red {
+        background-color: $color-red;
+        color: $color-white;
+
+        &:hover { background-color: lighten($color-red, 5%); }
+        &:active { background-color: darken($color-red, 10%); }
+    }
+
+    &--grey {
+        background-color: $color-grey-light-4;
+        color: $color-secondary;
+
+        &:hover { 
+            background-color: $color-grey-light-3; 
+            color: $color-primary;
+        }
+    }
+
+    &--outline {
+        background-color: transparent;
+        border: 2px solid $color-primary;
+        color: $color-primary;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+}
+
+.btn-signup {
+    @extend .btn;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: $default-font-size-mid;
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid transparent;
+        padding: 3px;
+        transition: all 0.2s;
+        background: none;
+        font-weight: 600;
+    }
+
+    &:hover {
+        color: $color-primary-dark;
+        border-bottom: 1px solid $color-primary-dark;
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+        color: $color-primary-dark;
+    }
+}

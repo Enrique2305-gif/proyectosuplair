@@ -1,0 +1,209 @@
+.oferta-card {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  /* Estilo visual actualizado */
+  border: 1px solid $color-grey-light-3;
+  border-radius: 12px;
+  background-color: $color-white;
+  margin-bottom: 1rem;
+  padding: 0rem;
+
+  /* Modern look */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  /* LOGO BOX */
+  &__logoBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    &__imgBox {
+      max-width: 2rem;
+
+      &__img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  /* ETIQUETAS - AHORA CON ESPACIO PARA LOS 3 PUNTOS */
+  &__etiquetaBox {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 0.8rem;
+  padding-right: 2.4rem;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    padding-right: 0;
+    margin-top: 0.5rem;
+  }
+
+  &__etiqueta {
+    color: $color-white;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    width: fit-content;
+    white-space: nowrap;
+    line-height: 1.2;
+
+    &--green {
+      background-color: $color-tag-green;
+    }
+
+    &--red {
+      background-color: $color-tag-red;
+    }
+
+    &--purple {
+      background-color: $color-tag-purple;
+    }
+
+    &--lightblue {
+      background-color: $color-tag-lightblue;
+    }
+
+    &--grey {
+      background-color: $color-tag-grey;
+    }
+  }
+
+  &__etiqueta2 {
+    background-color: $color-tag-blue;
+    color: $color-white;
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    width: fit-content;
+    white-space: nowrap;
+    line-height: 1.2;
+  }
+}
+
+  /* IMAGEN */
+  &__imgbox {
+    width: 32%;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0.7rem;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+  }
+
+  /* DATOS */
+  &__datosbox {
+    width: 68%;
+    padding: 1rem 1.2rem;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      padding: 0.8rem 1rem 1.2rem 1rem;
+    }
+
+    &__title {
+      width: 100%;
+      margin-bottom: 0.6rem;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-blue;
+      }
+    }
+
+    &__otros {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 0.4rem;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+
+      &__der {
+        & > :not(:last-child) {
+          margin-bottom: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+/* REPORTAR - AHORA AL LADO DE LAS ETIQUETAS */
+.oferta-card-main {
+  position: relative;
+}
+
+.oferta-card-reportarBox {
+  position: absolute;
+  right: 1rem; // Ahora está alineado con el borde derecho
+  top: 1rem; // Mismo top que las etiquetas
+  z-index: 10; // Asegura que esté por encima
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem; // Ancho fijo para el icono de 3 puntos
+  height: 2rem; // Alto fijo
+  
+  @media (max-width: 768px) {
+    right: 0.6rem;
+    top: 0.6rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $color-blue;
+  }
+}
+
+.oferta-card-reportarTooltip {
+  background-color: $color-white;
+  border: 1px solid $color-grey-light-3;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  color: $color-red;
+  position: absolute;
+  right: 0; // Alineado con el botón de reportar
+  top: 2.5rem; // Justo debajo del botón
+  z-index: 20; // Por encima del botón
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  &:hover {
+    cursor: pointer;
+  }
+}

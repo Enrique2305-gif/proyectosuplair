@@ -1,0 +1,140 @@
+// Botón hamburguesa
+.hamburguesaBtn {
+  display: none;
+  position: fixed;
+  top: 7rem;
+  left: 1.5rem;
+  z-index: 1001;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 5px;
+  padding: 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba($color-black, 0.2);
+  transition: all 0.3s ease;
+  color: $color-white;
+
+  &:hover {
+    background-color: darken($color-primary, 10%);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    top: 6rem;
+    left: 1rem;
+  }
+}
+
+// Overlay oscuro
+.menuOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-black, 0.5);
+  z-index: 999;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.contNavegarAdm {
+  background-color: $color-white;
+  border-radius: 5px;
+  padding: 2rem 1rem;
+  transition: transform 0.3s ease;
+  
+  @media (max-width: 1024px) {
+    position: fixed;
+    top: 5rem;
+    left: -100%;
+    width: 280px;
+    max-width: 80vw;
+    height: calc(100vh - 5rem);
+    overflow-y: auto;
+    z-index: 1000;
+    border-radius: 0;
+    box-shadow: 2px 0 10px rgba($color-black, 0.1);
+    
+    &--open {
+      left: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+    width: 260px;
+  }
+  
+  @media (max-width: 480px) {
+    width: 240px;
+  }
+  
+  .explorarCat__title {
+    @media (max-width: 768px) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.ContListaNav {
+  &--Item {
+    text-decoration: none;
+    color: $color-grey-dark;
+    padding: 0rem 1rem;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    
+    @media (max-width: 1024px) {
+      padding: 0.8rem 1rem;
+      margin: 0.3rem 0;
+      
+      &:hover {
+        background-color: rgba($color-primary, 0.1);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      padding: 0.7rem 1rem;
+    }
+    
+    .explorarCat__title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      
+      @media (max-width: 1024px) {
+        padding: 0.5rem 0;
+      }
+      
+      @media (max-width: 768px) {
+        padding: 0.4rem 0;
+      }
+    }
+  }
+
+  &--Item:hover {
+    cursor: pointer;
+    transform: translate(3px);
+    color: $color-tertiary;
+  }
+  
+  &--Item:active {
+    transform: translate(1px);
+  }
+}

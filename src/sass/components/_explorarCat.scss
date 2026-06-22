@@ -1,0 +1,80 @@
+.explorarCat {
+  background-color: $color-white;
+  border-radius: 5px;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    & > :not(:last-child) {
+      margin-right: 0.6rem;
+    }
+  }
+
+  &__titleCardOferta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      
+    }
+    &__tituloBox  {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      align-items: center;
+      & > :not(:last-child) {
+        margin-right: 0.6rem;
+      }
+    }
+    &__filtrarBox  {
+      display: flex;
+      flex-direction: row;
+      flex-grow: 0.3;
+      align-items: center;
+      & > :last-child  {
+        flex-grow: 1;
+      }
+    }
+    & > :not(:last-child) {
+      margin-right: 0.6rem;
+      margin-bottom: 0.3rem;
+    }
+    & > :nth-last-child(2)  {
+      flex-grow: 0.7;
+    }
+  }
+
+  &__lista {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    position: relative;
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      text-decoration: none;
+      color: $color-black;
+
+      &:hover {
+        color: $color-blue;
+        transform: translate(0.5rem);
+      }
+
+      & > :not(:last-child) {
+        margin-right: 0.6rem;
+      }
+
+    }
+
+  }
+
+}

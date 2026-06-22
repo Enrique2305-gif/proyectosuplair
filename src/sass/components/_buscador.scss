@@ -1,0 +1,146 @@
+.buscador {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  min-height: 3rem;
+
+  display: flex;
+  align-items: stretch;
+
+  padding: 0.15rem 0.25rem;
+  background-color: $color-white;
+  border-radius: 999px;
+  border: 1px solid $color-grey-light-3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+
+  /* cuando el input está en focus, todo el buscador reacciona */
+  &:focus-within {
+    border-color: $color-blue;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.10);
+    transform: translateY(-1px);
+  }
+
+  /* mensaje de error debajo (SearchPage) */
+  &__errorBusqueda {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1.6rem;
+    display: flex;
+    justify-content: center;
+
+    .paragraph {
+      font-size: $default-font-size-sm;
+      color: $color-red;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0 1rem;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
+    font-size: $default-font-size;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-grey-dark;
+      opacity: 0.7;
+    }
+  }
+
+  &__searchBtn {
+    height: 100%;
+    padding: 0 1rem;
+    min-width: 3rem;
+
+    border: none;
+    border-radius: 999px;
+    background-color: $color-blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background-color 0.18s ease, transform 0.12s ease, box-shadow 0.12s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color-blue, 4%);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    min-height: 2.6rem;
+    padding: 0.1rem 0.2rem;
+
+    &__input {
+      font-size: $default-font-size-sm;
+      padding: 0 0.8rem;
+    }
+
+    &__searchBtn {
+      padding: 0 0.8rem;
+      min-width: 2.6rem;
+    }
+
+    &__errorBusqueda {
+      bottom: -1.4rem;
+    }
+  }
+}
+
+/* tus iconos quedan igual, no hace falta tocarlos */
+.icon-white {
+  color: $color-white;
+}
+
+.icon-grey {
+  color: $color-grey-dark;
+}
+
+.icon-purple {
+  color: $color-primary;
+}
+
+.icon--bg {
+  font-size: 2.8rem;
+}
+
+.icon--md {
+  font-size: 2rem;
+}
+
+.icon--md--2 {
+  font-size: 2.6rem;
+}
+
+.icon--sm {
+  font-size: 1.5rem;
+}
+
+.icon--super-big {
+  font-size: 10rem;
+}

@@ -1,0 +1,92 @@
+.empty-state {
+  width: 100%;
+  min-height: 18rem;
+  border: 1px dashed $color-grey-light-3;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba($color-grey-light-1, 0.95), $color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.4rem;
+  text-align: center;
+  gap: 0.8rem;
+
+  &__icon {
+    font-size: 4.2rem;
+    color: $color-primary;
+    background-color: rgba($color-primary, 0.08);
+    border-radius: 50%;
+    padding: 1rem;
+  }
+
+  &__title {
+    color: $color-secondary-dark;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+
+  &__message {
+    color: $color-grey-dark;
+    font-size: 1.4rem;
+    max-width: 42rem;
+  }
+
+  &__action {
+    margin-top: 1rem;
+  }
+}
+
+.skeleton-card {
+  display: flex;
+  gap: 1.6rem;
+  min-height: 16rem;
+  padding: 1.2rem;
+  border-radius: 14px;
+  border: 1px solid $color-grey-light-3;
+  background-color: $color-white;
+  overflow: hidden;
+
+  &__image,
+  &__line {
+    background: linear-gradient(90deg, $color-grey-light-2, $color-grey-light-1, $color-grey-light-2);
+    background-size: 200% 100%;
+    animation: skeleton-shimmer 1.4s ease infinite;
+  }
+
+  &__image {
+    width: 32%;
+    border-radius: 12px;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  &__line {
+    height: 1.4rem;
+    border-radius: 999px;
+    width: 80%;
+
+    &--lg { width: 92%; height: 1.8rem; }
+    &--sm { width: 46%; }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    &__image {
+      width: 100%;
+      min-height: 12rem;
+    }
+  }
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}

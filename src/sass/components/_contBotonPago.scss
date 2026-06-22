@@ -1,0 +1,291 @@
+.contBotonPago {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.5rem 3rem;
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 2rem 2.5rem;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 600px) {
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 1.2rem 1.5rem;
+    gap: 1.2rem;
+  }
+
+  &__saldoBox {
+    width: 100%;
+    max-width: 350px;
+    padding: 1.2rem 1rem;
+    background-color: rgba(0, 140, 186, 0.15);
+    border: 2px solid #008CBA;
+    border-radius: 5px;
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-size: 1.6rem;
+      color: #000000;
+
+      strong {
+        color: #008CBA;
+      }
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+      padding: 1rem 0.8rem;
+      
+      p {
+        font-size: 1.4rem;
+
+        strong {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  &__descuentoSelector {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    label {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-grey-dark-2;
+    }
+
+    &__select {
+      width: 100%;
+      padding: 1.2rem 1rem;
+      font-size: 1.4rem;
+      border: 2px solid $color-grey-light-3;
+      border-radius: 5px;
+      background-color: white;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        border-color: $color-primary;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary;
+        box-shadow: 0 0 0 3px rgba(0, 140, 186, 0.1);
+      }
+
+      option {
+        padding: 1rem;
+
+        &:disabled {
+          color: $color-grey-light-3;
+          font-style: italic;
+        }
+      }
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+
+      label {
+        font-size: 1.4rem;
+      }
+
+      &__select {
+        padding: 1rem 0.8rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__descuentoInfo {
+    width: 100%;
+    max-width: 350px;
+    padding: 1.5rem;
+    background-color: #E8F5E9;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    p {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #000000;
+
+      strong {
+        color: #2E7D32;
+      }
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+      padding: 1.2rem;
+      
+      p {
+        font-size: 1.3rem;
+
+        strong {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+
+  &__totalCard {
+    width: 100%;
+    max-width: 350px;
+    background: linear-gradient(135deg, #6B46C1 0%, #553C9A 100%);
+    border-radius: 15px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 8px 24px rgba(107, 70, 193, 0.3);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+
+    // Patrón decorativo de fondo
+    &::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 200%;
+      height: 200%;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.03) 10px,
+        rgba(255, 255, 255, 0.03) 20px
+      );
+      animation: movePattern 20s linear infinite;
+    }
+
+    @keyframes movePattern {
+      0% {
+        transform: translate(0, 0);
+      }
+      100% {
+        transform: translate(50px, 50px);
+      }
+    }
+
+    &__precio {
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+      letter-spacing: -1px;
+
+      @media (max-width: 768px) {
+        font-size: 4rem;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 3.5rem;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 3rem;
+      }
+    }
+
+    &__label {
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 0.5px;
+
+      @media (max-width: 600px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    &__original {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: line-through;
+      margin-top: 1rem;
+      position: relative;
+      z-index: 1;
+
+      @media (max-width: 600px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+      padding: 2rem 1.5rem;
+    }
+
+    @media (max-width: 480px) {
+      padding: 1.8rem 1.2rem;
+    }
+  }
+
+  h1 {
+    margin: 1rem 0;
+    font-size: 3rem;
+    font-weight: 700;
+    color: $color-primary;
+    text-align: center;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 2.6rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 2.2rem;
+      margin: 0.8rem 0;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+
+  .paragraph {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+    text-align: center;
+
+    @media (max-width: 600px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  &__paypalContainer {
+    width: 100%;
+    max-width: 350px;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: 600px) {
+      max-width: 100%;
+    }
+  }
+}

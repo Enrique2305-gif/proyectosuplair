@@ -1,0 +1,75 @@
+.perfil {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__twoColumn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    &__left {
+      width: 35%;
+    }
+
+    &__right {
+      width: 65%;
+    }
+
+    & > :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__twoColumnResp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+    &__left {
+      width: 35%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    &__right {
+      width: 65%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    & > :not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__imgBox {
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+      height: 100%;
+    }
+  }
+
+  &__dataBox {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    //height: 20%;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: $color-grey-light-4;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+
+}

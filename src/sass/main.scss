@@ -1,0 +1,144 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/oferta-card";
+@import "components/progressbar";
+@import "components/buscador";
+@import "components/explorarCat";
+@import "components/favoritosProv";
+@import "components/actividadesRec";
+@import "components/extrellasbox";
+@import "components/notificacion-card";
+@import "components/metodoPago";
+@import "components/compraProducto";
+@import "components/prodOfertaButtonBox";
+@import "components/izqPanelSubCrear";
+@import "components/formSubirProducto";
+@import "components/resumenProducto";
+@import "components/resumenSolicitud";
+@import "components/accionExitosa";
+@import "components/formCrearOferta";
+@import "components/buscadorAdm";
+@import "components/contNavegarAdm";
+@import "components/cardUsuario";
+@import "components/cardSolicitud";
+@import "components/oferta-card-adm";
+@import "components/calificarProductoBox";
+@import "components/listaOrdenComp";
+@import "components/reportaOferta";
+@import "components/perfiltooltip";
+@import "components/perfil";
+@import "components/terminosModal";
+@import "components/modalReporteInvitaciones";
+@import "components/contBotonPago";
+@import "pages/proveedor/panel-principal-prov";
+@import "components/form";
+@import "components/dashboardCard";
+@import "components/empty-state";
+@import "components/historialOferta";
+
+@import "layout/navigation";
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/cargando";
+
+@import "pages/administrador/adm-main";
+@import "pages/administrador/usuarios-page";
+@import "pages/administrador//adm-ofertas-page";
+@import "pages/comprador/comp-main";
+@import "pages/comprador/oferta-detalle";
+@import "pages/authPages/login";
+@import "pages/authPages/signup";
+@import "pages/authPages/sesion-expirada";
+@import 'components/profile-card';
+
+.navigation__leftButtons__box__indRespHidden {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.propuestaCard {
+  background: #fff;
+  border: 1px solid #dfe6ef;
+  border-radius: 16px;
+  padding: 1.6rem;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 0.8rem 1.8rem rgba(0, 0, 0, 0.06);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #22324a;
+    margin-bottom: 0.3rem;
+  }
+
+  &__date {
+    font-size: 1.3rem;
+    color: #6c7a92;
+  }
+
+  &__badge {
+    padding: 0.45rem 1rem;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+
+    &--green {
+      background: #35a96b;
+    }
+
+    &--red {
+      background: #ef4444;
+    }
+
+    &--yellow {
+      background: #f59e0b;
+    }
+  }
+
+  &__body {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.4rem;
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    min-width: 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    span {
+      font-size: 1.2rem;
+      color: #6c7a92;
+    }
+
+    b {
+      font-size: 1.8rem;
+      color: #22324a;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
+//@import "pages/proveedor";

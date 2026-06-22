@@ -1,0 +1,15 @@
+.estrellasbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+
+  &__starOn{
+    color: $color-yellow;
+  }
+
+  &__starOff{
+    color: $color-grey-light-3;
+  }
+
+}

@@ -1,0 +1,134 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-secondary;
+  padding: 2rem;
+  background-color: $color-grey-light-1;
+  -webkit-font-smoothing: antialiased;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+  }
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  color: $color-primary-dark;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+  
+  @media (max-width: 768px) {
+    margin-bottom: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    margin-bottom: 0.6rem;
+  }
+}
+
+h1 { 
+  font-size: 2.8rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2.4rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+}
+
+h2 { 
+  font-size: 2.4rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2.1rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
+}
+
+h3 { 
+  font-size: 2rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
+}
+
+.paragraph {
+  font-size: $default-font-size;
+  margin-bottom: 0.5rem;
+
+  &--bold {
+    font-weight: 600;
+  }
+
+  &--mid {
+    font-size: $default-font-size-mid;
+    font-weight: 600;
+  }
+
+  &--mid--2 {
+    font-size: $default-font-size;
+    color: $color-secondary-light;
+  }
+
+  &--sm {
+    font-size: $default-font-size-sm;
+  }
+
+  &--smResp {
+    font-size: $default-font-size-sm;
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &--primary { color: $color-primary; }
+  &--blue    { color: $color-blue; }
+  &--green   { color: $color-green; }
+  &--red     { color: $color-red; }
+  &--white   { color: $color-white; }
+
+  &--grey {
+    color: $color-secondary-light;
+  }
+  &--grey--2 {
+    color: $color-secondary;
+  }
+
+  &--tag {
+    &--green     { color: $color-tag-green; }
+    &--blue      { color: $color-tag-blue; }
+    &--red       { color: $color-tag-red; }
+    &--purple    { color: $color-tag-purple; }
+    &--lightblue { color: $color-tag-lightblue; }
+    &--grey      { color: $color-tag-grey; }
+  }
+}
+
+.hrGeneral {
+  border: none;
+  border-top: 1px solid $color-grey-light-3;
+  margin: 1.5rem 0;
+  
+  @media (max-width: 768px) {
+    margin: 1.2rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 1rem 0;
+  }
+}

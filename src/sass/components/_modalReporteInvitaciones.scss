@@ -1,0 +1,242 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalReporteInvitaciones {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 900px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+
+    h2 {
+      margin: 0;
+      color: $color-primary;
+    }
+  }
+
+  &__closeBtn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: $color-grey-dark-2;
+    padding: 0;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__loading,
+  &__error {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  &__error {
+    color: #d32f2f;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: $color-grey-light-1;
+    border-radius: 5px;
+  }
+
+  &__infoItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    p {
+      margin: 0;
+    }
+
+    strong {
+      color: $color-primary;
+    }
+  }
+
+  &__codigo {
+    font-family: monospace;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 3px;
+    border: 1px solid $color-grey-light-3;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  &__invitados {
+    h3 {
+      margin-bottom: 1rem;
+      color: $color-primary;
+    }
+  }
+
+  &__table {
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+
+      thead {
+        background-color: $color-primary;
+        color: white;
+
+        th {
+          padding: 1rem;
+          text-align: left;
+          font-weight: 600;
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid $color-grey-light-3;
+
+          &:hover {
+            background-color: $color-grey-light-1;
+          }
+
+          td {
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Tablet (pantallas menores a 768px)
+  @media (max-width: 768px) {
+    width: 95%;
+    padding: 1.5rem;
+    max-height: 90vh;
+
+    &__header {
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    &__info {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    &__table {
+      table {
+        font-size: 1.3rem;
+
+        thead th {
+          padding: 0.8rem;
+          font-size: 1.2rem;
+        }
+
+        tbody td {
+          padding: 0.8rem;
+        }
+      }
+    }
+  }
+
+  // Móvil (pantallas menores a 480px)
+  @media (max-width: 480px) {
+    width: 98%;
+    padding: 1rem;
+    border-radius: 5px;
+
+    &__header {
+      margin-bottom: 1rem;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__closeBtn {
+      font-size: 1.8rem;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    &__content {
+      gap: 1rem;
+    }
+
+    &__info {
+      padding: 0.8rem;
+      gap: 0.8rem;
+    }
+
+    &__codigo {
+      font-size: 1rem;
+      padding: 0.4rem;
+      word-break: break-all;
+    }
+
+    &__invitados {
+      h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &__table {
+      // En móvil, hacemos la tabla scrolleable horizontalmente
+      -webkit-overflow-scrolling: touch;
+
+      table {
+        min-width: 500px;
+        font-size: 1.2rem;
+
+        thead th {
+          padding: 0.6rem;
+          font-size: 1.1rem;
+          white-space: nowrap;
+        }
+
+        tbody td {
+          padding: 0.6rem;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.calificarProductoBox {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.calificarProductoBox:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.calificarProductoBox:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.calificarProductoBox:not(:checked) > label:before {
+  content: '★ ';
+}
+.calificarProductoBox > input:checked ~ label {
+  color: #ffc700;    
+}
+.calificarProductoBox:not(:checked) > label:hover,
+.calificarProductoBox:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.calificarProductoBox > input:checked + label:hover,
+.calificarProductoBox > input:checked + label:hover ~ label,
+.calificarProductoBox > input:checked ~ label:hover,
+.calificarProductoBox > input:checked ~ label:hover ~ label,
+.calificarProductoBox > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+
+.calificarProductoBox__outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}

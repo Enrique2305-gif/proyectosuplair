@@ -1,0 +1,159 @@
+.panelProv {
+  background-color: $color-white;
+  border-radius: 1.6rem;
+  padding: 2.8rem;
+  box-shadow: 0 1.2rem 3rem rgba($color-black, 0.08);
+  width: 100%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__subtitle {
+    color: $color-primary;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+  }
+
+  &__title {
+    color: $color-secondary-dark;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  &__description {
+    color: $color-secondary-light;
+    font-size: 1.5rem;
+    max-width: 62rem;
+  }
+
+  &__warning {
+    background-color: $color-red-light;
+    color: $color-red;
+    border-radius: 1rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.6rem;
+    margin-bottom: 3rem;
+  }
+
+  &__card {
+    background-color: $color-grey-light-1;
+    border: 1px solid $color-grey-light-3;
+    border-radius: 1.4rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.08);
+    }
+  }
+
+  &__cardIcon {
+    color: $color-primary;
+    font-size: 3.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__cardValue {
+    color: $color-secondary-dark;
+    font-size: 2.6rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+  }
+
+  &__cardLabel {
+    color: $color-secondary-light;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  &__quickActions {
+    margin-top: 1rem;
+
+    h2 {
+      color: $color-secondary-dark;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__actionsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }
+
+  &__action {
+    border: 1px solid $color-grey-light-3;
+    background-color: $color-white;
+    border-radius: 1.4rem;
+    padding: 1.6rem;
+    display: flex;
+    gap: 1.4rem;
+    align-items: flex-start;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    span {
+      color: $color-blue;
+      font-size: 3rem;
+    }
+
+    b {
+      color: $color-secondary-dark;
+      font-size: 1.5rem;
+    }
+
+    p {
+      color: $color-secondary-light;
+      font-size: 1.3rem;
+      margin-top: 0.3rem;
+    }
+
+    &:hover {
+      border-color: $color-blue;
+      background-color: $color-grey-light-1;
+      transform: translateY(-0.2rem);
+    }
+  }
+
+  @media (max-width: 1100px) {
+    &__stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 700px) {
+    padding: 2rem;
+
+    &__stats,
+    &__actionsGrid {
+      grid-template-columns: 1fr;
+    }
+
+    &__title {
+      font-size: 2.3rem;
+    }
+  }
+}

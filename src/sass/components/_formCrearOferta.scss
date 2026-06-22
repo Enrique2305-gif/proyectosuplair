@@ -1,0 +1,33 @@
+.formCrearOferta {
+
+  &__productoBox {
+
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: $color-grey-light-4;
+    padding: 1rem;
+    gap: 1rem;
+
+    &__imgBox {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      position: relative;
+      min-height: 20rem ;
+      max-height: 20rem;
+      
+      &__img {
+        width: 100%;
+        max-height: 20rem;
+        object-fit: contain;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+
+

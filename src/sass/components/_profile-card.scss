@@ -1,0 +1,57 @@
+// En un archivo nuevo: src/sass/components/_profile-card.scss
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.profile-card-modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  min-width: 350px; /* Ancho mínimo */
+  position: relative; /* Para el botón de cerrar */
+
+  /* Aquí pones los estilos de tu imagen */
+  .perfil-foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  
+  h3, p {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .codigo-referido-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+  }
+
+  .modal-close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+}

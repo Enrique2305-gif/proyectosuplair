@@ -1,0 +1,27 @@
+.usuariosContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.8rem;
+  padding: 1rem 0;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
+
+  &--col {
+    background-color: $color-white;
+    border: 1px solid $color-grey-light-3;
+    border-radius: 14px;
+    padding: 1.8rem;
+    min-height: 20rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+
+    @media (max-width: 768px) {
+      padding: 1.4rem;
+    }
+
+    .paragraph {
+      margin-bottom: 0.8rem;
+    }
+  }
+}

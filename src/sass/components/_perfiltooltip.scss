@@ -1,0 +1,26 @@
+.perfiltooltip {
+  position: absolute;
+  right: 0;
+  top: 5rem;
+  width: 15rem;
+  background-color: white;
+  border-color: $color-grey-dark-3;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+
+  &__option {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    color: $color-grey-dark-3;
+    gap: 1rem;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $color-grey-dark-3;
+      color: white;
+    }
+  }
+
+}

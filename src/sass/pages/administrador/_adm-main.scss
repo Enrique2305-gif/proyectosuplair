@@ -1,0 +1,248 @@
+.admContainer {
+  margin-top: 5rem;
+  min-height: calc(100vh - 5rem);
+  
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+}
+
+.adm-main-container__izqCont {
+  position: fixed;
+  left: 1rem;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  z-index: 900;
+  
+  @media (max-width: 1024px) {
+    // El menú ahora está en position fixed controlado por el botón hamburguesa
+    position: static;
+    width: auto;
+    left: auto;
+    margin-bottom: 0;
+  }
+}
+
+.admMainContainer {
+  position: absolute;
+  background-color: $color-white;
+  border-radius: 5px;
+  padding: 2rem;
+  width: 77%;
+  left: 22%;
+  min-height: calc(100vh - 7rem);
+  
+  @media (max-width: 1024px) {
+    position: relative;
+    width: 100%;
+    left: 0;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    border-radius: 3px;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    
+    @media (max-width: 1024px) {
+      font-size: 2.8rem;
+      margin-left: 5rem; // Espacio para el botón hamburguesa
+    }
+    
+    @media (max-width: 768px) {
+      font-size: 2.4rem;
+      margin-left: 4.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 2rem;
+      margin-left: 4rem;
+    }
+  }
+}
+
+// Estilos para el buscador
+.admBusquedaBox {
+  margin: 1.5rem 0;
+  
+  @media (max-width: 768px) {
+    margin: 1rem 0;
+  }
+  
+  @media (max-width: 480px) {
+    margin: 0.8rem 0;
+  }
+}
+
+.admNavegacionContainer {
+  padding: 1rem;
+  
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+
+  &--panelBotones {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    
+    @media (max-width: 1024px) {
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      gap: 1rem;
+      padding: 0.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+
+.botonPanelAdm {
+  &--box {
+    text-decoration: none;
+    color: $color-grey-dark-3;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $color-grey-light-1;
+    box-shadow: 2px 2px $color-grey-light-2;
+    border-radius: 5px;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media (max-width: 768px) {
+      padding: 1.5rem;
+    }
+    
+    @media (max-width: 480px) {
+      padding: 1.2rem;
+      width: 100%;
+    }
+
+    &--icon {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      font-size: 3rem;
+      
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+      
+      @media (max-width: 480px) {
+        font-size: 2.2rem;
+      }
+    }
+
+  }
+
+  &--box:hover {
+    color: $color-tertiary;
+    cursor: pointer;
+    transform: translate(1px, 1px);
+  }
+}
+
+
+.imgAdmPanel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-height: 50rem;
+  padding: 10rem;
+  
+  @media (max-width: 1024px) {
+    padding: 5rem;
+    max-height: 40rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 3rem;
+    max-height: 35rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 2rem;
+    max-height: 25rem;
+  }
+
+  &--box {
+    position: relative;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding: 5rem;
+    
+    @media (max-width: 1024px) {
+      height: 30rem;
+      padding: 3rem;
+    }
+    
+    @media (max-width: 768px) {
+      height: 25rem;
+      padding: 2rem;
+    }
+    
+    @media (max-width: 480px) {
+      height: 20rem;
+      padding: 1rem;
+    }
+  }
+
+  &--img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+
+}
+
+.admPrincipalContainer {
+  margin-top: 1rem;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: $color-grey-light-3;
+  padding: 3rem;
+  
+  @media (max-width: 1024px) {
+    padding: 2.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    padding: 2rem;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1.5rem;
+    margin-top: 0.5rem;
+  }
+}

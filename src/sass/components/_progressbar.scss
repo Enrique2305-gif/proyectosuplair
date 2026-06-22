@@ -1,0 +1,17 @@
+.progressbar{
+  width: 100%;
+  background-color: $color-grey-light-3;
+  border-radius: 10px;
+}
+
+.actualProgress{
+
+  width: 1%;
+  height: 2rem;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: $color-blue;
+
+  //@include full-round-corner-progressbar($progressWidth);
+
+}

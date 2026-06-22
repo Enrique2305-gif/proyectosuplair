@@ -1,0 +1,58 @@
+// Paletas de colores
+$color-primary:       #5D3FD3;
+$color-primary-light: #8066E0;
+$color-primary-dark:  #3D258A;
+
+$color-secondary:       #2D3748;
+$color-secondary-light: #718096;
+$color-secondary-dark:  #1A202C;
+
+$color-tertiary:       #319795; 
+$color-tertiary-light: #81E6D9;
+$color-tertiary-dark:  #285E61;
+
+$color-blue:       #3182CE; 
+$color-blue-light: #BEE3F8;
+
+$color-green:       #38A169;
+$color-green-light: #C6F6D5;
+$color-green-dark:  #22543D;
+
+$color-purple:      #5D3FD3;
+
+$color-red:       #E53E3E;
+$color-red-light: #FED7D7;
+
+$color-yellow:    #ECC94B;
+$color-warning:   #D69E2E;
+
+$color-grey-light-1: #F7FAFC;
+$color-grey-light-2: #EDF2F7;
+$color-grey-light-3: #E2E8F0;
+$color-grey-light-4: #CBD5E0;
+
+$color-grey-dark:   #718096;
+$color-grey-dark-2: #4A5568;
+$color-grey-dark-3: #2D3748;
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-error: $color-red;
+
+// ETIQUETAS (TAGS)
+$color-tag-green:     #38A169;
+$color-tag-blue:      #3182CE;
+$color-tag-red:       #E53E3E;
+$color-tag-purple:    #805AD5;
+$color-tag-lightblue: #0BC5EA;
+$color-tag-grey:      #718096;
+
+// Fuente
+$default-font-size: 1.6rem;      // 16px
+$default-font-size-mid: 2rem;    // 20px
+$default-font-size-sm: 1.4rem;   // 14px
+
+// Grid
+$grid-width: 120rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;
